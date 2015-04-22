@@ -20,6 +20,8 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.1)
+    active_model_serializers (0.9.3)
+      activemodel (>= 3.2)
     activejob (4.2.1)
       activesupport (= 4.2.1)
       globalid (>= 0.3.0)
@@ -37,6 +39,9 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.0)
+    barber (0.9.0)
+      ember-source (>= 1.0, < 2)
+      execjs (>= 1.2, < 3)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -50,6 +55,19 @@ GEM
     coderay (1.1.0)
     columnize (0.9.0)
     debug_inspector (0.0.2)
+    ember-data-source (1.0.0.beta.16.1)
+      ember-source (~> 1.8)
+    ember-handlebars-template (0.1.5)
+      barber (>= 0.9.0)
+      sprockets (>= 2.1, < 3.1)
+    ember-rails (0.18.2)
+      active_model_serializers
+      ember-data-source (>= 1.0.0.beta.5)
+      ember-handlebars-template (>= 0.1.1, < 1.0)
+      ember-source (>= 1.1.0)
+      jquery-rails (>= 1.0.17)
+      railties (>= 3.1)
+    ember-source (1.11.1)
     erubis (2.7.0)
     execjs (2.5.2)
     globalid (0.3.5)
@@ -139,6 +157,8 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   byebug
+  ember-rails
+  ember-source (= 1.11.1)
   jquery-rails (= 3.0.3)
   meta_request
   quiet_assets

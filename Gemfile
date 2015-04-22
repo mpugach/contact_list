@@ -7,8 +7,8 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'jquery-rails','3.0.3'
 
-# gem 'ember-rails'
-# gem 'ember-source','1.11.3'
+gem 'ember-rails'
+gem 'ember-source','1.11.1'
 
 group :development, :test do
   gem 'byebug'
