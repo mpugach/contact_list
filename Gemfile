@@ -10,6 +10,8 @@ gem 'jquery-rails','3.0.3'
 gem 'ember-rails'
 gem 'ember-source','1.11.1'
 
+gem 'responders', '~> 2.0'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
