@@ -1,5 +1,14 @@
 // For more information see: http://emberjs.com/guides/routing/
 
 App.Router.map(function() {
-  // this.resource('posts');
+  this.resource('contacts', function () {
+    this.resource('contact', { path: '/:contact_id' }, function () {
+      this.route('edit');
+    });
+    this.route('new');
+  });
+});
+
+App.Router.reopen({
+  location: 'history'
 });
