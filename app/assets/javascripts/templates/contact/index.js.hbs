@@ -2,7 +2,19 @@
 
 <div>
   {{#link-to 'contact.edit' model}}Edit{{/link-to}}
+
+  <button {{action 'delete'}}>Delete</button>
+
+  {{#if deleteMode}}
+    <div class="confirm-box">
+      <h4>Really?</h4>
+      <button {{action "confirmDelete"}}> yes </button>
+      <button {{action "cancelDelete"}}> no </button>
+    </div>
+  {{/if}}
+
   <br/>
+
   <label><b>Name:</b></label>
   <p>{{model.firstName}}</p>
 

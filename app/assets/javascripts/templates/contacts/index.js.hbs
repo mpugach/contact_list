@@ -4,14 +4,12 @@
   <tr>
     <th>Full name</th>
     <th>Phone</th>
-    <th>Actions</th>
   </tr>
 
   {{#each contact in controller}}
     <tr>
       <td>{{#link-to 'contact' contact}}{{contact.firstName}} {{contact.lastName}}{{/link-to}}</td>
       <td>{{contact.phone}}</td>
-      <td>{{#link-to 'contact.edit' contact}}Edit{{/link-to}}</td>
     </tr>
   {{/each}}
 </table>
