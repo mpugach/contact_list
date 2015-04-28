@@ -22,9 +22,15 @@ module Api
     end
 
     def create
-      @contact = Contact.create(contact_params)
+      @contact = Contact.new(contact_params)
 
-      respond_with @contact
+      respond_to do |format|
+        if @contact.save
+          format.json { render json: @contact, status: :created }
+        else
+          format.json { render json: @contact.errors, status: :unprocessable_entity }
+        end
+      end
     end
 
     def update
