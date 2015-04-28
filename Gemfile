@@ -20,11 +20,11 @@ group :development, :test do
   gem 'quiet_assets'
   gem 'binding_of_caller'
   gem 'factory_girl_rails'
+  gem 'teaspoon', '0.9.1'
 end
 
 group :test do
   gem 'rspec-rails'
   gem 'database_cleaner'
-  gem 'teaspoon', '0.7.9'
 end
 

@@ -14,14 +14,13 @@
 //= require ./router
 
 App = Ember.Application.create({
-  <% if Rails.env.development? %>
-    rootElement: '#ember-app',
+  rootElement: '#ember-app',
+
+  <% unless Rails.env.production? %>
 //    LOG_RESOLVER: true,
     LOG_TRANSITIONS: true,
     LOG_TRANSITIONS_INTERNAL: true,
     LOG_ACTIVE_GENERATION: true,
     LOG_VIEW_LOOKUPS: true
-  <% else %>
-    rootElement: '#ember-testing'
   <% end %>
 });
