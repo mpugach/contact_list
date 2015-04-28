@@ -25,5 +25,6 @@ end
 group :test do
   gem 'rspec-rails'
   gem 'database_cleaner'
+  gem 'teaspoon', '0.7.9'
 end
 
