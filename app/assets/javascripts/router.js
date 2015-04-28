@@ -1,5 +1,3 @@
-// For more information see: http://emberjs.com/guides/routing/
-
 App.Router.map(function() {
   this.resource('contacts', function () {
     this.resource('contact', { path: '/:contact_id' }, function () {
