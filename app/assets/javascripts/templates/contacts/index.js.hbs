@@ -1,15 +1,15 @@
 <h2>Index</h2>
 
-<table border='1'>
+<table>
   <tr>
     <th>Full name</th>
     <th>Phone</th>
   </tr>
 
-  {{#each contact in controller}}
+  {{#each controller.model itemController='contact' as |contact| }}
     <tr>
-      <td>{{#link-to 'contact' contact}}{{contact.firstName}} {{contact.lastName}}{{/link-to}}</td>
-      <td>{{contact.phone}}</td>
+      <td>{{#link-to 'contact' contact.model}}{{contact.fullName}}{{/link-to}}</td>
+      <td>{{contact.model.phone}}</td>
     </tr>
   {{/each}}
 </table>
