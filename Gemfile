@@ -19,5 +19,11 @@ group :development, :test do
   gem 'meta_request'
   gem 'quiet_assets'
   gem 'binding_of_caller'
+  gem 'factory_girl_rails'
+end
+
+group :test do
+  gem 'rspec-rails'
+  gem 'database_cleaner'
 end
 
