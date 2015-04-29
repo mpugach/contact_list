@@ -16,7 +16,7 @@
 App = Ember.Application.create({
   rootElement: '#ember-app',
 
-  <% unless Rails.env.production? %>
+  <% if Rails.env.development? %>
 //    LOG_RESOLVER: true,
     LOG_TRANSITIONS: true,
     LOG_TRANSITIONS_INTERNAL: true,

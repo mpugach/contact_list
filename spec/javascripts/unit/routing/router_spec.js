@@ -1,4 +1,16 @@
 module('Routing spec', {
+  setup: function () {
+    App.ApplicationAdapter = DS.FixtureAdapter;
+    App.Contact.FIXTURES = [
+      {
+        id: 1,
+        first_name: 'Petro',
+        last_name: 'Ivanov',
+        phone: '111'
+      }
+    ]
+  },
+
   beforeEach: function() {
     application = startApp();
   },
@@ -9,11 +21,21 @@ module('Routing spec', {
 });
 
 test('root route', function() {
-  visit('/');
+  routesTo('/', 'index');
+});
 
-  andThen(function() {
-    var current_route = currentPath();
+test('contacts route', function() {
+  routesTo('/contacts', 'contacts.index');
+});
 
-    equal(current_route, 'index', 'Expected index got: ' + current_route);
-  });
+test('contacts.new route', function() {
+  routesTo('/contacts/new', 'contacts.new');
+});
+
+test('contact show route', function() {
+  routesTo('/contacts/1', 'contacts.contact.index');
+});
+
+test('contact edit route', function() {
+  routesTo('/contacts/1/edit', 'contacts.contact.edit');
 });
